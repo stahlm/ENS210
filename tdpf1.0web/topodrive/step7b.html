@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>TopoDrive - Step 7b</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#ffffff" LINK="#000099" VLINK="#551a8b" ALINK="#ff0000">
+
+<table BORDER=0 WIDTH="500" >
+<tr>
+<td>
+
+
+<H2>Step 7b: Animation (Particle Movement)</H2>
+
+<p>This step shows the movement of fluid particles whose initial positions are specified in Step 6b.</p>
+<UL>
+<LI>Click the "Animation" button to bring up the 
+        Animation Dialog Box. 
+        
+<LI>Set the animation speed by specifying the amount of travel time 
+(in days or years) that is equal to 1 second of animation time. The 
+appropriate speed will depend on the domain length, water table shape, 
+and hydraulic properties. For an initial attempt, try setting 1 second 
+of animation time = 10 days. If the resulting animation is too slow, 
+then increase the animation speed (for example, 1 second of animation 
+time = 100 days). If the animation is too fast, decrease the 
+animation speed (for example, 1 second of animation time = 1 day). 
+        
+<LI>Set the animation smoothness by specifying 
+        number of frames per second. 
+        
+<LI>Click "OK" and wait for the window to be 
+        refreshed. 
+        
+<LI>To start the animation, click anywhere inside 
+        the window (below the buttons). 
+        
+<LI>Additional clicks alternately freeze and 
+        unfreeze the animation. 
+        
+<LI>The elapsed travel time is shown at the bottom of the window.</LI>
+</UL>
+
+<P><IMG height=379 src="step7b.gif" width=494></P>
+
+<P>Animation of fluid particle movement is computationally 
+intensive because particle positions are computed "on the fly," 
+that is, during the animation process. Animating a large number 
+of fluid particles at fast animation speed could result in a "jerky" 
+animation because the computer cannot update the screen at the 
+required rate. If this occurs, stop the animation, reduce the 
+number of particles (draw a smaller polygon and/or increase the 
+particle spacing), and/or use a lower animation speed (reduced 
+the travel time per second of animation time). The animation 
+terminates when the last fluid particle exits the flow domain.</P>
+
+<P>
+Back to <A href="step6b.html" >Step 6b</A><BR>
+Return to <A href="topodrv.html">Introduction</A>
+</P>
+
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

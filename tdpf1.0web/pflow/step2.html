@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>ParticleFlow - Step 2</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#ffffff" LINK="#000099" VLINK="#551a8b" ALINK="#ff0000">
+
+<table BORDER=0 WIDTH="500" >
+<tr>
+<td>
+
+
+<H2>Step 2: Properties</H2>
+
+<P>This step assigns hydraulic properties (hydraulic conductivity and porosity) to model elements.</P>
+<UL>
+<LI>Click the "Properties" button to bring up the 
+        Properties Dialog Box. 
+        
+<LI>Five sets of hydraulic conductivity (m/s) and porosity (%) values are 
+available for assignment to model elements. Each set is represented by a color. 
+Default values are initially provided, but users may alter any or all of these 
+values in the edit boxes.
+</UL>
+
+<p>
+Two options are now available. To randomly assign hydraulic conductivity and 
+porosity values to the grid, click the “Randomize” check box and then click “OK”. 
+Each pair of triangle elements (forming a square) will be randomly assigned one of 
+five colors corresponding to the properties in the dialog box.
+
+<P><IMG src="step2_1.gif" height=379 width=406></P>
+
+
+<p>
+Alternatively, properties can be manually assigned to the grid as follows:
+<ul>
+<LI>Select a set of hydraulic conductivity 
+        and porosity values by clicking the color icon. 
+        
+<LI>Click "OK" to close the dialog box. 
+        
+<LI>Draw a polygon to enclose those elements you 
+        want to assign the selected property values. A polygon is drawn by 
+        clicking at its vertices. To finish drawing the polygon, double click 
+        the last vertex. 
+        
+<LI>The elements enclosed by the polygon are filled with the color you selected
+in the dialog box.</LI>
+</UL>
+
+<P><IMG src="step2_2a.gif" height=377 width=405></P>
+
+<P><IMG src="step2_2b.gif" height=377 width=405></P>
+
+<P>Additional zones with the same properties may be defined by drawing 
+additional polygons. To specify a zone with different property values, 
+click the "Properties" button again to bring up the dialog box and 
+click on a different color icon. Then click "OK," draw a polygon as before. 
+The newly selected elements now are filled with the new color. Drawing 
+mistakes can be rectified by overdrawing with another zone. Any part of 
+the mesh not covered by a polygon will have properties corresponding to 
+the white color.</P>
+
+<P>
+Go to <A href="step3.html">Step 3</A><BR>
+Back to <A href="step1.html">Step 1</A><BR>
+Return to <A href="pflow.html">Introduction</A>
+</P>
+
+</td>
+</tr>
+</table>
+</BODY>
+</HTML>

@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>Steady-State Topography-Driven Flow</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#ffffff" LINK="#000099" VLINK="#551a8b" ALINK="#ff0000">
+
+<table BORDER=0 WIDTH="500" >
+<tr>
+<td>
+
+<H2>Steady-State Topography-Driven Flow</H2>
+
+<H3><A href="#RunModel">Skip ahead to run the model</A> </H3>
+
+<H2>Introduction</H2>
+
+<P>A topography-driven flow system is one in which ground water flows 
+from higher-elevation recharge areas, where hydraulic head is higher, 
+to lower-elevation discharge areas, where hydraulic head is lower. 
+This type of flow system is commonly encountered in ground-water basins. 
+The main factors that control ground-water flow are basin geometry, 
+shape of the water table, and the distribution of hydraulic properties. 
+A key purpose of the TopoDrive model is to enable the user to investigate 
+how these factors control ground-water flow.</P>
+
+<P><IMG height=180 src="domain.gif" width=460></P>
+
+<P>For a two-dimensional vertical section, the boundaries of the flow domain 
+(see above figure) are as follows :</P>
+
+<UL>
+<LI>The top boundary (AB) is the water table, which is assumed to lie 
+close to land surface.  
+        
+
+<LI>The two vertical boundaries (BC and AD) and the bottom boundary (DC) are 
+no flow boundaries.</LI>
+</UL>
+
+<P>The no-flow boundaries might represent ground-water flow divides or 
+low-permeability bedrock that bounds the basin. Note that by specifying 
+the position of the water table, it is assumed that the pattern of 
+recharge and discharge is such that the water table is maintained at 
+steady state.</P>
+
+<H2>Governing Equation</H2>
+
+<P>Steady-state flow of ground water in the vertical section
+is governed by the equation</P>
+
+<P><IMG height=80 src="floweq.gif" width=320></P>
+
+<P>where <I>h</I> is hydraulic head, and <I>K<SUB>xx</SUB></I> and <I>K<SUB>zz</SUB></I>
+are the principal values of the hydraulic conductivity tensor. The principal
+directions are assumed to be parallel to the cartesian axes <I>x</I>and <I>z</I>.</P>
+
+<H2>Boundary Conditions</H2>
+
+<P>Assuming the position of the water table is known, the boundary condition along 
+the water table (AB) is</P>
+
+<P><IMG height=55 src="wtbc.gif" width=70></P>
+
+<P>where <I>z</I> is the elevation of the water table.</P>
+
+<P>Along the vertical boundaries BC and AD, the no-flow boundary condition
+is</P>
+
+<P><IMG height=70 src="vertbc.gif" width=90></P>
+
+<P>Along bottom boundary CD, the no-flow boundary condition is </P>
+
+<P><IMG height=70 src="horzbc.gif" width=90></P>
+
+<P>The computer model TopoDrive solves the above equations by the finite 
+element method. The flow domain is represented by a deformed rectangular mesh, 
+and each quadrilateral cell is divided into two triangular elements. 
+Linear basis functions are used in the finite element formulation. 
+After solving for hydraulic head <I>h</I>, the <I>x</I> and <I>z</I> components
+of the average interstitial velocity vector are computed by</P>
+
+<P><IMG height=80 src="velocity.gif" width=370></P>
+
+<P>where <I>n</I> is porosity. The velocity vectors are used for calculating
+flow paths and the advective movement of fluid particles.</P>
+
+<H2><BR>
+<A NAME="RunModel"></A>Running the Model</H2>
+
+<P><APPLET code=ss.basic.AppletButton.class height=60 id=Applet1 width=350 archive="topodrv.jar">
+	<PARAM NAME="windowwidth" VALUE="640">
+	<PARAM NAME="windowheight" VALUE="440">
+	<PARAM NAME="windowclass" VALUE="ss.topodrive.ssTopoDriveFrame">
+	<PARAM NAME="windowtitle" VALUE="Steady-State Topography-Driven Flow">
+	<PARAM NAME="buttontext" VALUE="Click here to run the Model">
+	
+      <BLOCKQUOTE>
+	<P>
+	<HR>
+	<I>
+	Sorry, your Web browser is not Java capable. Please 
+      use a Java capablebrowser to run the model.</I>
+	 <HR>
+	</P>
+	</BLOCKQUOTE>
+	
+      </APPLET>
+</P>
+
+<P>Running the model involves 7 steps. To begin each step, click the 
+corresponding button at the top of the window. A dialog box appears 
+for you to enter the necessary input data. The three buttons on the 
+second row allow you to zoom in, zoom out, and quit the model. </P>
+
+<P><IMG height=91 src="buttons.gif" width=479></P>
+
+<OL>
+<P>
+<A href="step1.html">Step 1</A>: Start -- Specify model dimension<BR>
+<A href="step2.html">Step 2</A>: Water Table -- Specify the position of the
+water table<BR>
+<A href="step3.html">Step 3</A>: Mesh -- Specify the dimension of the model mesh<BR>
+<A href="step4.html">Step 4</A>: Properties -- Specify hydraulic conductivity
+and porosity<BR>
+<A href="step5.html">Step 5</A>: Head -- Compute hydraulic head</P>
+
+<P>After hydraulic head is computed, two options are available. You may
+proceed to</P>
+
+<P><A href="step6a.html">Step 6a</A>: Flow (Path) -- Track flow paths from selected
+points<BR>
+<A href="step7a.html">Step 7a</A>: Animation -- Animate the evolution of flow
+paths</P>
+
+<P>or</P>
+
+<P><A href="step6b.html">Step 6b</A>: Flow (Particle) -- Set up initial distribution
+of fluid particles<BR>
+<A href="step7b.html">Step 7b</A>: Animation -- Animate the advective movement
+of fluid particles</P>
+</OL>
+
+
+</td>
+</tr>
+</table>
+
+</BODY>
+</HTML>
